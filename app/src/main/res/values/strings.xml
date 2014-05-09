@@ -2,7 +2,7 @@
 <resources>
 
   <string name="app_name">sandbox</string>
-  <string name="hello_world">Hello world!</string>
+  <string name="hello_world">お砂場の世界からこんにちはー。</string>
   <string name="action_settings">Settings</string>
 
 </resources>
