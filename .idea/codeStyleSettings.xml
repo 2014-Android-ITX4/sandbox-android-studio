@@ -56,8 +56,7 @@
           <option name="SPACE_AFTER_CLOSING_ANGLE_BRACKET_IN_TYPE_ARGUMENT" value="true" />
         </JavaCodeStyleSettings>
         <XML>
-          <option name="XML_KEEP_LINE_BREAKS" value="false" />
-          <option name="XML_SPACE_INSIDE_EMPTY_TAG" value="true" />
+          <option name="XML_LEGACY_SETTINGS_IMPORTED" value="true" />
         </XML>
         <codeStyleSettings language="Groovy">
           <option name="KEEP_LINE_BREAKS" value="false" />
@@ -195,7 +194,7 @@
                 <match>
                   <AND>
                     <NAME>xmlns:android</NAME>
-                    <XML_NAMESPACE />
+                    <XML_NAMESPACE>Namespace:</XML_NAMESPACE>
                   </AND>
                 </match>
               </rule>
@@ -203,7 +202,7 @@
                 <match>
                   <AND>
                     <NAME>xmlns:.*</NAME>
-                    <XML_NAMESPACE />
+                    <XML_NAMESPACE>Namespace:</XML_NAMESPACE>
                   </AND>
                 </match>
                 <order>BY_NAME</order>
