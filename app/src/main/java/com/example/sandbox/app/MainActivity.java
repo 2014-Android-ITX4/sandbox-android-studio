@@ -1,38 +1,21 @@
 package com.example.sandbox.app;
 
-import android.hardware.Sensor;
-import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.TextView;
-
-import java.lang.reflect.Type;
-import java.util.List;
 
 
 public class MainActivity
   extends ActionBarActivity
 {
-    private SensorManager sensor_manager;
 
   @Override
   protected void onCreate( Bundle savedInstanceState )
   {
     super.onCreate( savedInstanceState );
     setContentView( R.layout.activity_main );
-
-    TextView sensor_view = (TextView)findViewById( R.id.sensor );
-    sensor_manager = (SensorManager)getSystemService( SENSOR_SERVICE );
-    List<Sensor> sensors = sensor_manager.getSensorList( Sensor.TYPE_ALL );
-    String sensors_text = "";
-    for(Sensor s : sensors){
-      sensors_text += s.getName() + "\n";
-    }
-    sensor_view.setText( sensors_text );
   }
-
 
 
   @Override
