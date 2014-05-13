@@ -9,8 +9,15 @@
                 tools:context="com.example.sandbox.app.MainActivity">
 
   <TextView
+    android:id="@+id/hello"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="@string/hello_world" />
+  
+  <TextView
+    android:id="@+id/sensor"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10pt"/>
 
 </RelativeLayout>
