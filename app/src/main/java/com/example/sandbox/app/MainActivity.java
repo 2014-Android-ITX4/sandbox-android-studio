@@ -3,6 +3,8 @@ package com.example.sandbox.app;
 import android.graphics.Typeface;
 import android.hardware.Sensor;
 import android.hardware.SensorManager;
+import android.media.AudioManager;
+import android.media.SoundPool;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
@@ -22,6 +24,11 @@ import java.io.OutputStream;
 public class MainActivity
   extends ActionBarActivity
 {
+  private  SoundPool _sound_pool = null;
+  private  int _sound_id_ = 0;
+
+
+
   private SensorManager sensor_manager;
 
   @Override
@@ -29,6 +36,10 @@ public class MainActivity
   {
     super.onCreate( savedInstanceState );
     setContentView( R.layout.activity_main );
+
+    _sound_pool = new SoundPool( 1, AudioManager.STREAM_MUSIC, 0 );
+    _sound_id_ = _sound_pool.load( getApplicationContext(), R.raw.chicken, 0 );
+
 
     TextView sensor_view = (TextView)findViewById( R.id.sensor );
     sensor_manager = (SensorManager)getSystemService( SENSOR_SERVICE );
@@ -96,8 +107,8 @@ public class MainActivity
     // automatically handle clicks on the Home/Up button, so long
     // as you specify a parent activity in AndroidManifest.xml.
     int id = item.getItemId();
-    if ( id == R.id.action_settings )
-    {
+    if ( id == R.id.action_settings ){
+      _sound_pool.play( _sound_id_, 1.f, 1.f, 0, 0, 1.f );
       return true;
     }
     else if(id == R.id.action_quit)
