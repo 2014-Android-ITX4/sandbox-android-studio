@@ -37,10 +37,6 @@ public class MainActivity
     {
       return true;
     }
-    else if(id == R.id.action_quit)
-    {
-      finish();
-    }
     return super.onOptionsItemSelected( item );
   }
 }
